@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.all{
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(242,242,242);
+    display: flex;
+    justify-content: center;
+    /* position: relative; */
+    
+}
+.wrap{
+    width: fit-content;
+    height: fit-content;
+    /* background-color: brown; */
+    /* position: relative; */
+    /* display: flex;
+    justify-content: center; */
+}
+.logo{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+}
+.logo img{
+    width: 150px;
+    margin-top: 20px;
+    /* position: absolute; */
+}
+.form{
+    width: 400px;
+    height: fit-content;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 50px;
+    box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.205);
+    /* position: absolute; */
+    
+}
+.login-login{    
+    width: 400px;
+    color: black;
+    font-size: 9px;
+    margin-top: 15px;
+}
+.login-login h2{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+.login{
+    display: flex;
+    justify-content: center ;
+
+}
+.login-google, .login-apple{
+    width: 170px;
+    height: 40px;
+    border: 1px solid rgb(66,133,250);
+    color: rgb(66,133,250);
+    border-radius: 4px;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5px;
+}
+.login-google p, .login-apple p{
+    margin: 0px 0px 0px 5px;
+}
+.login-google img{
+    width: 50px;
+}
+.login-apple img{
+    width: 20px;
+}
+#input {
+    display: block;
+
+}
+.or{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.or hr{
+    width: 160px;
+    border: 1px solid rgb(219,219,214);
+    color: rgb(219,219,214);
+}
+.circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 1px solid  rgb(219,219,214);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.circle h6{
+    color: rgba(0, 0, 0, 0.24);
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 9px;
+}
+
+
+input{
+    width: 350px;
+    height: 45px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.37);
+    border-radius: 4px;
+}
+
+input::placeholder {
+    font-weight: 500;
+    font-size: 13px;
+    color: rgb(219,219,214);
+}
+#input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+
+.inwrap{
+    width: fit-content;
+    /* background-color: blueviolet; */
+    margin-top: 20px;
+    display: grid;
+    justify-content: center;
+}
+#input h6{
+    font-size: 13px;
+    font-weight: 400;
+}
+#password{
+    margin-top: 15px;
+}
+#loginButton{
+    width: 350px;
+    height: 45px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(51,178,123);
+    margin-top: 20px;
+    color: white;
+    font-weight: bold;
+}
+#account{
+    width: 100%;
+    height: 100px;
+    background-color:rgb(248,248,248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.div h6{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    color: rgb(155,155,155);
+    margin-top: 20px;
+}
+#account button{
+    width: 350px;
+    height: 40px;
+    border: 1px solid rgb(237,1,127);
+    border-radius: 4px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(237,1,127);
+    font-weight: 500;
+   
+}
+#account button:hover{
+    color: white;
+    background-color: rgb(237,1,127);
+}
+
+.navbar{
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    display: none;
+    justify-content: space-around;
+}
+.navbar button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border: none;
+    background: none;
+    
+}
+
+
+/* media query */
+@media (max-width : 575px){
+    .all{
+        width: 100%;
+        height: 150vh;
+    }
+
+   .navbar{
+    display: flex;
+   }
+  }
