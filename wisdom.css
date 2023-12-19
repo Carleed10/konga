@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  #navbar,
+  #navbar-2 {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+  }
+  
+  #navbar-2 {
+    display: none;
+    color: rgba(255, 255, 255, 0.514);
+  }
+  
+  #nav {
+    width: 65%;
+  }
+  
+  #nav-buttons,
+  #add-to-cart {
+    width: 120px;
+  }
+  #add-to-cart {
+    width: 70px;
+  }
+  #navbar-2 button {
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+  }
+  
+  #search-bar button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 130px;
+    padding: 5px;
+    border: none;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    height: 60px;
+  }
+  
+  #search-bar2 button:hover,
+  #search-bar #search-bar2 #searcher:hover {
+    background-color: white;
+    color: #ed007f;
+  }
+  
+  #search-bar small {
+    font-size: 13px;
+  }
+  
+  #search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+  }
+  
+  #search-bar {
+    width: 100%;
+    height: 60px;
+    background-color: #ed007f;
+    position: fixed;
+    top: 40px;
+    z-index: 5;
+  }
+  
+  #search-bar2 {
+    width: 90%;
+  }
+  
+  #search input {
+    width: 90%;
+    height: 30px;
+    border-radius: 2px 0px 0px 2px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    padding-left: 10px;
+  }
+  
+  #search button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 100%;
+    background-color: #fba100;
+    border-radius: 0px 2px 2px 0px;
+  }
+  
+  #search-bar2 #mycart {
+    width: 130px;
+    height: 35px;
+    background-color: #32b27a;
+    font-size: 13px;
+  }
+  
+  #search-bar2 #konga:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+  }
+  
+  #search-bar2 #mycart small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    width: 20px;
+    height: 24px;
+    background-color: white;
+    border-radius: 3px;
+    margin-left: 4px;
+    font-weight: 700;
+  }
+  
+  #search-bar2 #mycart:hover {
+    color: white;
+    background-color: #299063;
+  }
+  
+  #search-bar #search-bar2 #searcher {
+    height: 60px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  #search-dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.296);
+    width: 200px;
+    height: 150px;
+    text-align: left;
+    display: none;
+    top: 75px;
+  }
+  #search iconify-icon {
+    color: white;
+  }
+  
+  #search-parent {
+    position: relative;
+  }
+  
+  #search-parent:hover #search-dropdown {
+    display: flex;
+  }
+  
+  #shopping-line {
+    display: flex;
+    background-color: #94004f;
+    height: 40px;
+    color: white;
+    font-size: 14px;
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    z-index: 3;
+  }
+  
+  #shopping-line small,
+  #shopping-line b {
+    width: fit-content;
+  }
+  
+  #shopping-line small:hover,
+  #shopping-line b:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  #display-sales {
+    height: 400px;
+    background-color: #efefef;
+  }
+  
+  #display-one,
+  #display-two {
+    border-radius: 10px;
+    background-color: white;
+    height: 370px;
+    width: 65%;
+  }
+  
+  #display-two {
+    background-color: white;
+  
+    width: 30%;
+  }
+  
+  #display-square {
+    width: 175px;
+    height: 170px;
+    background-color: #94004f;
+    border-radius: 10px;
+  }
+  
+  #display-square img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+  .carousel-item img {
+    border-radius: 10px;
+    height: 370px;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(8, 8, 8, 0.94);
+    border-radius: 50%;
+  }
+  
+  #shopping-buttons {
+    display: flex;
+    height: 50px;
+    background-color: whitesmoke;
+  }
+  #shopping-button {
+    padding-top: 10px;
+    width: 20%;
+    height: 100%;
+  }
+  
+  #shopping-button small {
+    color: #626262;
+  }
+  
+  #shopping-buttons2 {
+    display: flex;
+    height: 80px;
+  }
+  #shopping-button2 {
+    width: 14%;
+    height: 75%;
+    border-radius: 5px;
+    color: #626262;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.113);
+  }
+  
+  #todays-deals {
+    width: 98%;
+    height: fit-content;
+  
+    border-radius: 10px 10px 0 0;
+  }
+  
+  #deals-header {
+      background-color: #94004f;
+    color: white;
+    height: 15%;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  #deals-content {
+    height: fit-content;
+    background-color: white;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+    width: 100%;
+    
+  }
+  
+  .seebutton {
+    background-color: rgba(245, 245, 245, 0);
+    color: white;
+  }
+  .deal1  , .deal2{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 400px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.068);
+    height: 130px;
+    transition: all 1s;
+    background-color: white;
+    align-items: center;
+    
+  }
+  
+  .deal2{
+      width: 250px;
+      margin: 10px;
+      height: 320px;
+      text-align: left;
+     
+  }
+  
+  #sponsors{
+      width: 98%;
+    }
+  #sponsors img{
+      margin: auto;
+      margin-bottom: 10px;
+  }
+  .deal1:hover , .deal2:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.462);
+  }
+  
+  .dealtext {
+    width: 50%;
+    height: 100px;
+  }
+  
+  #categories{
+      width: 95%;
+  }
+  
+  
+  @media (max-width: 1190px) {
+    #nav {
+      width: 100%;
+    }
+  
+    #search-bar2 {
+      width: 98%;
+    }
+  
+    #display-sales {
+      height: 1000px;
+      flex-direction: column;
+    }
+  
+    #display-one {
+      width: 98%;
+    }
+    #display-two {
+      width: 98%;
+      height: 600px;
+    }
+    #display-square {
+      width: 48%;
+      height: 48%;
+    }
+  }
+  
+  @media (max-width: 970px) {
+    #shopping-line {
+      display: none;
+    }
+  
+    #shopping-buttons {
+      margin-top: 200px;
+    }
+  }
+  @media (max-width: 940px) {
+    #shopping-button2 small {
+      font-size: 10px;
+    }
+    .deal1{
+      width: 350px;
+    }
+  }
+  
+  @media (max-width: 820px) {
+    #search-bar2 #konga {
+      display: none;
+    }
+  }
+  @media (min-width: 767px) {
+    #shopping-buttons {
+      display: none;
+    }
+  
+    #display-sales {
+      margin-top: 100px;
+    }
+  }
+  
+  @media (min-width: 980px) {
+    #display-sales {
+      margin-top: 140px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    #shopping-buttons2 {
+      display: none;
+    }
+  
+    .carousel-item img {
+      border-radius: 10px;
+      height: 200px;
+    }
+    #display-one {
+      height: 200px;
+    }
+    #display-sales {
+      height: 850px;
+    }
+  
+    #shopping-buttons {
+      margin-top: 100px;
+    }
+    #navbar-2 {
+      display: flex;
+    }
+    #navbar {
+      display: none;
+    }
+    #search-bar .button {
+      display: none;
+    }
+    #search {
+      width: 95%;
+      height: 40px;
+    }
+    #search iconify-icon {
+      color: red;
+    }
+  
+    #search input {
+      height: 40px;
+      font-size: 13px;
+    }
+    #shopping-line {
+      display: none;
+    }
+  
+    #deals-content , #sponsored-content , #categories{
+      white-space: nowrap;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      overflow-y: none;
+  justify-content: start;   
+    }
+  
+    .deal1 img{
+      margin-right: 10px;
+    }
+  
+    
+  
+    .deal2{
+     padding: 100px;
+    }
+    .deal1{
+      justify-content: center;
+   margin: 20px;
+  padding: 40px 60px 40px 20px;
+  
+    }
+  }
+  
+  @media (max-width: 576px) {
+    #shopping-button small {
+      font-size: 10px;
+    }
+    #display-two {
+      height: 450px;
+    }
+    #display-sales {
+      height: 700px;
+    }
+  
+    #search input,
+    #search button {
+      background-color: rgb(225, 224, 224);
+    }
+    #search button iconify-icon {
+      color: #626262;
+    }
+  }
+  
+  @media (max-width: 380px) {
+    #display-two {
+      height: 380px;
+    }
+    #display-sales {
+      height: 630px;
+    }
+  }
