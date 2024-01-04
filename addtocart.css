@@ -3,9 +3,45 @@
  padding: 0;   
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .footer{
     width: 100%;
     height: fit-content;
+    /* margin-top: 300px; */
+    bottom: 0;
 }
 .top{
     width: 100%;
