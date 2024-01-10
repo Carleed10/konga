@@ -8,7 +8,7 @@
     background-color: rgb(242,242,242);
     display: flex;
     justify-content: center;
-    position: relative;
+    /* position: relative; */
     
 }
 .wrap{
@@ -30,7 +30,7 @@
     /* position: absolute; */
 }
 .form{
-    width: 100%;
+    width: 400px;
     height: fit-content;
     background-color: white;
     border-radius: 5px;
@@ -110,13 +110,29 @@
 }
 
 
-input{
+input , #inputdiv{
     width: 350px;
     height: 45px;
     padding: 10px;
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0.37);
     border-radius: 4px;
+}
+#inputdiv{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input2{
+    width: 250px;
+    border: none;
+    height: 40px;
+    padding: 0;
+    padding-left: 10px;
+    margin-bottom: 15px;
+  
 }
 
 input::placeholder {
@@ -135,7 +151,7 @@ input::placeholder {
 .inwrap{
     width: fit-content;
     /* background-color: blueviolet; */
-    margin-top: 10px;
+    margin-top: 20px;
     display: grid;
     justify-content: center;
 }
@@ -143,24 +159,18 @@ input::placeholder {
     font-size: 13px;
     font-weight: 400;
 }
-.inwrap label{
-    margin-bottom: 15px;
+#password{
+    margin-top: 15px;
 }
-
 #loginButton{
     width: 350px;
-    height: 35px;
+    height: 45px;
     border: none;
     border-radius: 4px;
     background-color: rgb(51,178,123);
-    margin-top: 10px;
+    margin-top: 20px;
     color: white;
     font-weight: bold;
-}
-span{
-    display: gr;
-    justify-content: center;
-    font-size: 14px;
 }
 #account{
     width: 100%;
@@ -197,17 +207,6 @@ span{
     color: white;
     background-color: rgb(237,1,127);
 }
-.pink{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 10px;
-    color: rgb(204,204,204);
-}
-.pink a{
-    color: rgb(204,204,204);
-}
-
 
 .navbar{
     width: 100%;

@@ -19,74 +19,46 @@ main{
 .div{
     width: 70%;
     height: 60vh;
-    background-color: red;
+    background-color: rebeccapurple;
     border-radius: 4px;
 }
-
+#round{
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
 </style>
 <body>
     <main>
 
 
         <div class="div">
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-    
-                    <img src="Images/HOMEESSENCIAL.jpg_Hy3lNyCrp.webp" class="d-block w-100" alt="...">
-                  
-                
-                
-                </div>
-                  <div class="carousel-item">
-                    
-                    <img src="Images/apple.jpg_SkswYfxvp.webp" class="d-block w-100" alt="...">
-
-                  </div>
-                  <div class="carousel-item">
-                    
-                    <img src="Images/EARLYHOLIDAYDEALS.jpg_ByRlEkCBa.jpg" class="d-block w-100" alt="...">
-
-                  </div>
-
-                  <div class="carousel-item">
-                    
-                    <img src="Images/NAIJASAVER.jpg_BkTeVJAra.jpg" class="d-block w-100" alt="...">
-
-                  </div>
-
-                  <div class="carousel-item">
-                    
-                    <img src="Images/weekend.jpg_Hk-CPfRS6.jpg" class="d-block w-100" alt="...">
-
-                  </div>
-
-
-                  <div class="carousel-item">
-                    
-                    <img src="Images/BUGASTORE.jpg_By2xEyRST.webp" class="d-block w-100" alt="...">
-
-                  </div>
-
-                  <div class="carousel-item">
-                    
-                    <img src="Images/Konga Banner 1400x599.png_S1pXUx8Ia.webp" class="d-block w-100" alt="...">
-
-                  </div>
-                 
-                </div>
-
-
-                <button class="carousel-control-prev"  type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button id="round" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active border-radius='50px' " aria-current="true" aria-label="Slide 1"></button>
+              <button id="round" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button id="round" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Images/Konga Banner 1400x599.png_S1pXUx8Ia.webp" alt="...">
               </div>
+              <div class="carousel-item">
+                <img src="Images/jarakv.jpg_rJMB4O1da.jpg" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="Images/NAIJASAVER.jpg_BkTeVJAra.jpg" alt="...">
+              </div>
+            </div>
+            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button> -->
+            <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button> -->
+          </div>
         </div>
 
 

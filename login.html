@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="login.css" />
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="all">
+        <div class="wrap">
+          <div class="logo">
+            <img src="images/konga.png" alt="" />
+          </div>
+
+          <div class="form">
+            <div class="login">
+              <div class="login-login">
+                <h2>Login</h2>
+                <hr />
+              </div>
+            </div>
+
+            <div class="login">
+              <button
+                style="background-color: rgba(240, 248, 255, 0)"
+                class="login-google"
+                onclick="loginWithGoogle()"
+              >
+                <img src="images/download__3_-removebg-preview.png" alt="" />
+                <p>Login with Google</p>
+              </button>
+
+              <div class="login-apple">
+                <img
+                  src="images/png-clipart-apple-logo-computer-icons-apple-logo-heart-logo-removebg-preview.png"
+                  alt=""
+                />
+                <p>Login with Apple</p>
+              </div>
+            </div>
+
+            <div class="or">
+              <hr />
+              <div class="circle">
+                <h6>OR</h6>
+              </div>
+              <hr />
+            </div>
+
+            <div id="input">
+              <div class="inwrap">
+                <label for="email">
+                  <h6>Email Address</h6>
+                  <input
+                    id="email"
+                    placeholder="Enter Email Address "
+                    type="text"
+                  />
+                </label>
+
+                <label for="password">
+                  <h6 class="mt-2">Password</h6>
+                  <div id="inputdiv">
+                    <input
+                      id="password"
+                      class="input2"
+                      placeholder="Enter Password"
+                      type="password"
+                      name="z"
+                    />
+                    <small id="showbutton" onclick="showPassword()" class="me-2"> </small>
+                  </div>
+                </label>
+
+                <button id="loginButton" onclick="login()">Login</button>
+              </div>
+            </div>
+
+            <div id="account">
+              <div class="div">
+                <h6>Don't have an account?</h6>
+                <button id="account" onclick="goToSignUp()">
+                  Create an account
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar">
+        <button>
+          <iconify-icon
+            icon="ic:outline-home"
+            style="color: rgba(0, 0, 0, 0.692)"
+            width="25"
+          ></iconify-icon>
+          Home
+        </button>
+        <button>
+          <iconify-icon
+            icon="majesticons:tag-line"
+            style="color: rgba(0, 0, 0, 0.692)"
+            width="25"
+            rotate="90deg"
+            flip="vertical"
+          ></iconify-icon>
+          Deals
+        </button>
+        <button>
+          <iconify-icon
+            icon="ion:cart-outline"
+            style="color: rgba(0, 0, 0, 0.692)"
+            width="25"
+          ></iconify-icon>
+          Cart
+        </button>
+        <button>
+          <iconify-icon
+            icon="gg:details-more"
+            style="color: rgba(0, 0, 0, 0.692)"
+            width="25"
+            flip="horizontal"
+          ></iconify-icon
+          >More
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
+<script>
+    
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCtpheR-YcUe5PtLm70iPe2T6qAApRNx6A",
+    authDomain: "konga-firebase.firebaseapp.com",
+    projectId: "konga-firebase",
+    storageBucket: "konga-firebase.appspot.com",
+    messagingSenderId: "342167466553",
+    appId: "1:342167466553:web:a99aa4bf4390da512ed3e8",
+    measurementId: "G-SLZE2H6T0W"
+  };
+
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+  // const analytics = getAnalytics(app);
+  var provider = new firebase.auth.GoogleAuthProvider();
+
+</script>
+
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"
+></script>
+<script>
+  let email = document.getElementById("email");
+  let password = document.getElementById("password");
+  let loginButton = document.getElementById("loginButton");
+  let showButton  = document.getElementById('showbutton')
+  showButton.innerHTML = "show"
+  function showPassword() {
+  
+    password.type == "password"
+      ? (password.type = "text")
+      : (password.type = "password");
+      showButton.innerHTML == "show"
+      ? (showButton.innerHTML = "hide")
+      : (showButton.innerHTML = "show");
+  }
+
+  function login() {
+    loginButton.innerHTML = `<div class="text-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>`;
+
+firebase.auth().signInWithEmailAndPassword(email.value, password.value)
+  .then((userCredential) => {
+    loginButton.innerHTML = "Login";
+    var user = userCredential.user;
+    let currentUser = user.email
+    alert('Login successful')
+    localStorage.setItem('currentUser', currentUser)
+        window.location.href = 'dashboard.html'
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    alert(errorMessage);
+    loginButton.innerHTML = "Login";
+  });
+
+
+}
+
+
+  function loginWithGoogle() {
+    firebase.auth()
+  .signInWithPopup(provider)
+  .then((userCredential) => {
+    /** @type {firebase.auth.OAuthCredential} */
+    var credential = result.credential;
+
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    alert('Login successful')
+    // IdP data available in result.additionalUserInfo.profile.
+      // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    alert(errorMessage)
+    // ...
+  });
+  }
+
+  function goToSignUp() {
+    window.location.href = "signup.html";
+  }
+</script>
+
