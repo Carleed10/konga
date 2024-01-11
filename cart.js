@@ -124,7 +124,6 @@ paymentForm.forEach((p)=> {
 })
 
 
-
 function payWithPaystack(e) {
   e.preventDefault();
   paymentForm.innerHTML = `<div class="text-center">
@@ -133,7 +132,7 @@ function payWithPaystack(e) {
   </div>
   </div>`;
   let handler = PaystackPop.setup({
-    key: "pk_test_9a558288d1670a641dafa6f4e899ddb24f2fe749", // Replace with your public key
+    key: "pk_test_956edfcad4b1f181c9b9bcc65438b88c62f9559f", // Replace with your public key
     email: currentUser,
     amount: totalPrice * 100,
     ref: "" + Math.floor(Math.random() * 1000000000 + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you

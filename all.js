@@ -59,11 +59,11 @@ function displayCartNumber() {
 displayCartNumber() 
 
 function goHome() {
-  window.location.href = "index.html";
+  window.location.href = "dashboard.html";
 }
 
 function carT() {
-  window.location.href = "cartPage.html"
+  window.location.href = "cart.html"
 }
 
 function seeAllItems() {
@@ -95,7 +95,7 @@ function goToCart() {
       console.log(user);
       currentUser = user;
 
-      window.location.href = "thecart.html";
+      window.location.href = "cart.html";
 
       // ...
     } else {
